@@ -1,6 +1,7 @@
 package ar.edu.utn.intermedio.java.ejercicio2;
 
 public class Vehiculo {
+	
 	private Integer cantidadRuedas;
 	private String color;
 	private String marca;
@@ -18,6 +19,7 @@ public class Vehiculo {
 	public Integer getCantidadRuedas() {
 		return cantidadRuedas;
 	}
+	
 	public void setCantidadRuedas(Integer cantidadRuedas) {
 		this.cantidadRuedas = cantidadRuedas;
 	}
