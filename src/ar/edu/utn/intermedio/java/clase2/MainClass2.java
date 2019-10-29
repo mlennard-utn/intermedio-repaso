@@ -8,7 +8,7 @@ public class MainClass2 {
 		
 		String cadena = "abc";
 		String cadena2 = new String("valorInicial");
-		char array[] = {'a','l','p'};
+		char array[] = {'a','l','p','e','s'};
 		String cadena3 = new String(array);
 		
 		StringBuffer buff = new StringBuffer();
