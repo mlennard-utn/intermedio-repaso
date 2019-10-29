@@ -8,6 +8,15 @@ public class Vehiculo {
 	private Integer cantidadMarchas;
 	private Integer velocidadMaxima;
 	
+	public int avanzar(int cantidadMinutos) {
+		int kilometrosAvanzados = 0;
+		float cantidadHoras = (float)cantidadMinutos / 60;
+		
+		kilometrosAvanzados = this.getVelocidadMaxima() * (int) cantidadHoras;
+		
+		return Calculadora.convertirKilometrosAMetros(kilometrosAvanzados);
+	}
+	
 	public float velocidadPorMarcha() {
 		return velocidadMaxima / cantidadMarchas;
 	}
