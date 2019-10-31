@@ -1,6 +1,9 @@
 package ar.edu.utn.intermedio.java.ejercicio2;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class Carrera {
@@ -40,6 +43,29 @@ public class Carrera {
 		}
 	
 		System.out.println("Moto mas lenta: " + masLenta);
+		
+		Collections.sort(listaMotos, new ComparadorVelocidad());
+		// La siguiente linea recorre la lista y por 
+		// cada elemento imprime la marca.
+		listaMotos.stream().forEach(m -> System.out.println(m.getMarca()));
+		
+		Collections.sort(listaMotos, new CompararAlfabetico());
+		
+		listaMotos.stream().forEach(m -> System.out.println(m.getMarca()));
+		
+		Comparator<Vehiculo> comp = new CompararAlfabetico();
+		
+		String ordenMotos = "velocidad";
+		
+		if ("velocidad".equalsIgnoreCase(ordenMotos)) {
+			comp = new ComparadorVelocidad();
+		} else if ("alfabetico".equalsIgnoreCase(ordenMotos)) {
+			comp = new CompararAlfabetico();
+		}
+		
+		Collections.sort(listaMotos, comp);
+		
+		listaMotos.stream().forEach(m -> System.out.println(m.getMarca()));
 		
 	}
 
